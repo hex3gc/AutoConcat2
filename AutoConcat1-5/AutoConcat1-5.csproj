@@ -1,0 +1,78 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net481</TargetFramework>
+    <RootNamespace>AutoConcat1_5</RootNamespace>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+    <PackageId>$(AssemblyName)</PackageId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Autoconcat-V2-Manual.html" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="icon.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Autoconcat-V2-Manual.html" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Costura.Fody" Version="5.7.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic.PowerPacks">
+      <HintPath>..\..\..\..\..\..\program files (x86)\reference assemblies\microsoft\vbpowerpacks\v12.0\microsoft.visualbasic.powerpacks.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="MessageBox_DeleteProject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="SettingsMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="MessageBox_SaveProject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="MessageBox_NewProject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="MessageBox_LoadProject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="MessageBox_DeleteDelimiterPreset.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="MessageBox_SaveProjectAs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+	<PropertyGroup>
+		<AssemblyName>AutoConcat 2.0.1</AssemblyName>
+	</PropertyGroup>
+
+</Project>

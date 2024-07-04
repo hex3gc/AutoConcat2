@@ -16,7 +16,15 @@ namespace AutoConcat1_5
             InitializeComponent();
 
             Assembly assembly = Assembly.GetExecutingAssembly();
-            var textStream = assembly.GetManifestResourceStream("AutoConcat1_5.Autoconcat-V2-Manual.html");
+            System.IO.Stream textStream;
+            if (ApplicationState.Instance.LightMode == false)
+            {
+                textStream = assembly.GetManifestResourceStream("AutoConcat1_5.Autoconcat-V2-Manual.html");
+            }
+            else
+            {
+                textStream = assembly.GetManifestResourceStream("AutoConcat1_5.Autoconcat-V2-ManualWhite.html");
+            }
             WebBrowser_Manual.DocumentStream = textStream;
         }
 

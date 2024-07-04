@@ -21,6 +21,10 @@ namespace AutoConcat1_5
             {
                 DefaultProject(true);
             }
+            else
+            {
+                DefaultProject(false);
+            }
 
             Concatenator.SetDataFields(DataRepeater_Operations, RichTextBox_In, RichTextBox_Out, TextBox_Prefix, TextBox_Infix, TextBox_Suffix);
 
@@ -55,6 +59,9 @@ namespace AutoConcat1_5
                     return true;
                 case (Keys.Control | Keys.N):
                     Button_NewProject.PerformClick();
+                    return true;
+                case (Keys.Control | Keys.L):
+                    Button_ProjectLoad.PerformClick();
                     return true;
 
                 case Keys.F1:
@@ -188,9 +195,9 @@ namespace AutoConcat1_5
 
             if (ApplicationState.Instance.LightMode == true)
             {
-                colBack = Color.FromArgb(210, 210, 210);
-                colLow = Color.FromArgb(230, 230, 230);
-                colMed = Color.FromArgb(240, 243, 249);
+                colBack = Color.FromArgb(200, 200, 200);
+                colLow = Color.FromArgb(225, 227, 230);
+                colMed = Color.FromArgb(240, 242, 245);
                 colHigh = Color.White;
                 colFore = Color.Black;
             }

@@ -833,7 +833,7 @@ namespace AutoConcat1_5
             this.Operation_PrePostCheckBox.AutoSize = true;
             this.Operation_PrePostCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.operationListBindingSource, "IsAfterConcat", true));
             this.Operation_PrePostCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Operation_PrePostCheckBox.Location = new System.Drawing.Point(491, 6);
+            this.Operation_PrePostCheckBox.Location = new System.Drawing.Point(479, 6);
             this.Operation_PrePostCheckBox.Name = "Operation_PrePostCheckBox";
             this.Operation_PrePostCheckBox.Size = new System.Drawing.Size(133, 19);
             this.Operation_PrePostCheckBox.TabIndex = 5;
@@ -846,7 +846,7 @@ namespace AutoConcat1_5
             this.Operation_BottomButtonBump.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Operation_BottomButtonBump.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(66)))), ((int)(((byte)(84)))));
             this.Operation_BottomButtonBump.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Operation_BottomButtonBump.Location = new System.Drawing.Point(630, 31);
+            this.Operation_BottomButtonBump.Location = new System.Drawing.Point(618, 31);
             this.Operation_BottomButtonBump.Name = "Operation_BottomButtonBump";
             this.Operation_BottomButtonBump.Size = new System.Drawing.Size(25, 23);
             this.Operation_BottomButtonBump.TabIndex = 8;
@@ -859,7 +859,7 @@ namespace AutoConcat1_5
             this.Button_TopOperationBump.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Button_TopOperationBump.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(66)))), ((int)(((byte)(84)))));
             this.Button_TopOperationBump.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Button_TopOperationBump.Location = new System.Drawing.Point(630, 6);
+            this.Button_TopOperationBump.Location = new System.Drawing.Point(618, 6);
             this.Button_TopOperationBump.Name = "Button_TopOperationBump";
             this.Button_TopOperationBump.Size = new System.Drawing.Size(25, 23);
             this.Button_TopOperationBump.TabIndex = 7;
@@ -872,7 +872,7 @@ namespace AutoConcat1_5
             this.Button_OperationDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Button_OperationDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(66)))), ((int)(((byte)(84)))));
             this.Button_OperationDelete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Button_OperationDelete.Location = new System.Drawing.Point(489, 31);
+            this.Button_OperationDelete.Location = new System.Drawing.Point(477, 31);
             this.Button_OperationDelete.Name = "Button_OperationDelete";
             this.Button_OperationDelete.Size = new System.Drawing.Size(135, 23);
             this.Button_OperationDelete.TabIndex = 6;
@@ -892,7 +892,7 @@ namespace AutoConcat1_5
             this.TextBox_OperationBot.ForeColor = System.Drawing.Color.White;
             this.TextBox_OperationBot.Location = new System.Drawing.Point(224, 31);
             this.TextBox_OperationBot.Name = "TextBox_OperationBot";
-            this.TextBox_OperationBot.Size = new System.Drawing.Size(245, 23);
+            this.TextBox_OperationBot.Size = new System.Drawing.Size(233, 23);
             this.TextBox_OperationBot.TabIndex = 3;
             this.TextBox_OperationBot.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TextBox_OperationBot_KeyUp);
             // 
@@ -908,7 +908,7 @@ namespace AutoConcat1_5
             this.TextBox_OperationTop.ForeColor = System.Drawing.Color.White;
             this.TextBox_OperationTop.Location = new System.Drawing.Point(224, 4);
             this.TextBox_OperationTop.Name = "TextBox_OperationTop";
-            this.TextBox_OperationTop.Size = new System.Drawing.Size(245, 23);
+            this.TextBox_OperationTop.Size = new System.Drawing.Size(233, 23);
             this.TextBox_OperationTop.TabIndex = 2;
             this.TextBox_OperationTop.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TextBox_OperationTop_KeyUp);
             // 
@@ -987,7 +987,7 @@ namespace AutoConcat1_5
             this.MinimumSize = new System.Drawing.Size(949, 626);
             this.Name = "AutoConcat";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "AutoConcat 2.0.1";
+            this.Text = "AutoConcat 2.0.3";
             this.LAYOUT_Main.ResumeLayout(false);
             this.LAYOUT_Main_Left.ResumeLayout(false);
             this.LAYOUT_Main_Left.PerformLayout();

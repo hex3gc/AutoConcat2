@@ -29,27 +29,29 @@ namespace AutoConcat1_5.Function
         }
 
         /// <summary>
-        /// Carry out the functionality below in sequence. Occurs every 'update' to automatically fill the data fields.
+        /// Carry out Operation and concatenation functionality in sequence. Occurs every time text is updated.
         /// </summary>
         public static void Concatenate()
         {
             string input = _inputBox.Text;
-            input = PreProcess(input);
+            input = Process(input, true);
             input = InsertDelimiters(input);
-            input = PostProcess(input);
+            input = Process(input, false);
             _outputBox.Text = input;
         }
 
-        // Apply filters and operations to the text before concatenation.
-        private static string PreProcess(string input)
+        // Apply filters and operations to the text before & after concatenation.
+        private static string Process(string input, bool pre)
         {
-            int indexCounter = 0;
             foreach (Operation op in OperationList.Instance)
             {
-                if (!op.IsAfterConcat)
+                if (pre && !op.IsAfterConcat)
                 {
                     input = DoOperation(op, input);
-                    indexCounter++;
+                }
+                if (!pre && op.IsAfterConcat)
+                {
+                    input = DoOperation(op, input);
                 }
             }
             return input;
@@ -63,22 +65,7 @@ namespace AutoConcat1_5.Function
             return input;
         }
 
-        // Apply filters and operations to the text after concatenation.
-        private static string PostProcess(string input)
-        {
-            int indexCounter = 0;
-            foreach (Operation op in OperationList.Instance)
-            {
-                if (op.IsAfterConcat)
-                {
-                    input = DoOperation(op, input);
-                    indexCounter++;
-                }
-            }
-            return input;
-        }
-
-        // Routes text through the functionality for all of the operations.
+        // Routes text through the functionality for each of the operations.
         private static string DoOperation(Operation operation, string input)
         {
             switch (operation.OpType)

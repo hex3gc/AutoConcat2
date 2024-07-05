@@ -74,7 +74,7 @@
     </EmbeddedResource>
   </ItemGroup>
 	<PropertyGroup>
-		<AssemblyName>AutoConcat 2.0.3</AssemblyName>
+		<AssemblyName>AutoConcat 2.0.4</AssemblyName>
 	</PropertyGroup>
 
 </Project>

@@ -44,7 +44,6 @@ namespace AutoConcat1_5
             this.label1 = new System.Windows.Forms.Label();
             this.DataRepeater_Projects = new Microsoft.VisualBasic.PowerPacks.DataRepeater();
             this.Label_ProjectTime = new System.Windows.Forms.Label();
-            this.savedProjectListBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.Label_ProjectTitle = new System.Windows.Forms.Label();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.Button_ProjectSave = new System.Windows.Forms.Button();
@@ -79,7 +78,6 @@ namespace AutoConcat1_5
             this.ComboBox_SelectOperation = new System.Windows.Forms.ComboBox();
             this.DataRepeater_Operations = new Microsoft.VisualBasic.PowerPacks.DataRepeater();
             this.label2 = new System.Windows.Forms.Label();
-            this.operationListBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.Operation_PrePostCheckBox = new System.Windows.Forms.CheckBox();
             this.Operation_BottomButtonBump = new System.Windows.Forms.Button();
             this.Button_TopOperationBump = new System.Windows.Forms.Button();
@@ -91,6 +89,8 @@ namespace AutoConcat1_5
             this.panel2 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.savedProjectListBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.operationListBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.delimiterPresetListBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.LAYOUT_Main.SuspendLayout();
             this.LAYOUT_Main_Left.SuspendLayout();
@@ -98,7 +98,6 @@ namespace AutoConcat1_5
             this.tableLayoutPanel6.SuspendLayout();
             this.DataRepeater_Projects.ItemTemplate.SuspendLayout();
             this.DataRepeater_Projects.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.savedProjectListBindingSource)).BeginInit();
             this.tableLayoutPanel5.SuspendLayout();
             this.LAYOUT_Main_Right.SuspendLayout();
             this.LAYOUT_Main_Right_Concat.SuspendLayout();
@@ -111,6 +110,7 @@ namespace AutoConcat1_5
             this.LAYOUT_Main_Right_Divider.SuspendLayout();
             this.DataRepeater_Operations.ItemTemplate.SuspendLayout();
             this.DataRepeater_Operations.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.savedProjectListBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.operationListBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.delimiterPresetListBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -287,11 +287,6 @@ namespace AutoConcat1_5
             this.Label_ProjectTime.Size = new System.Drawing.Size(187, 21);
             this.Label_ProjectTime.TabIndex = 6;
             this.Label_ProjectTime.Text = "null";
-            // 
-            // savedProjectListBindingSource
-            // 
-            this.savedProjectListBindingSource.AllowNew = false;
-            this.savedProjectListBindingSource.DataSource = typeof(AutoConcat1_5.Data.SavedProjectList);
             // 
             // Label_ProjectTitle
             // 
@@ -822,18 +817,13 @@ namespace AutoConcat1_5
             this.label2.Text = "(INTEGER ONLY)";
             this.label2.Visible = false;
             // 
-            // operationListBindingSource
-            // 
-            this.operationListBindingSource.AllowNew = false;
-            this.operationListBindingSource.DataSource = typeof(AutoConcat1_5.Data.OperationList);
-            // 
             // Operation_PrePostCheckBox
             // 
             this.Operation_PrePostCheckBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Operation_PrePostCheckBox.AutoSize = true;
             this.Operation_PrePostCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.operationListBindingSource, "IsAfterConcat", true));
             this.Operation_PrePostCheckBox.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Operation_PrePostCheckBox.Location = new System.Drawing.Point(479, 6);
+            this.Operation_PrePostCheckBox.Location = new System.Drawing.Point(471, 6);
             this.Operation_PrePostCheckBox.Name = "Operation_PrePostCheckBox";
             this.Operation_PrePostCheckBox.Size = new System.Drawing.Size(133, 19);
             this.Operation_PrePostCheckBox.TabIndex = 5;
@@ -846,7 +836,7 @@ namespace AutoConcat1_5
             this.Operation_BottomButtonBump.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Operation_BottomButtonBump.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(66)))), ((int)(((byte)(84)))));
             this.Operation_BottomButtonBump.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Operation_BottomButtonBump.Location = new System.Drawing.Point(618, 31);
+            this.Operation_BottomButtonBump.Location = new System.Drawing.Point(610, 31);
             this.Operation_BottomButtonBump.Name = "Operation_BottomButtonBump";
             this.Operation_BottomButtonBump.Size = new System.Drawing.Size(25, 23);
             this.Operation_BottomButtonBump.TabIndex = 8;
@@ -859,7 +849,7 @@ namespace AutoConcat1_5
             this.Button_TopOperationBump.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Button_TopOperationBump.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(66)))), ((int)(((byte)(84)))));
             this.Button_TopOperationBump.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Button_TopOperationBump.Location = new System.Drawing.Point(618, 6);
+            this.Button_TopOperationBump.Location = new System.Drawing.Point(610, 6);
             this.Button_TopOperationBump.Name = "Button_TopOperationBump";
             this.Button_TopOperationBump.Size = new System.Drawing.Size(25, 23);
             this.Button_TopOperationBump.TabIndex = 7;
@@ -872,7 +862,7 @@ namespace AutoConcat1_5
             this.Button_OperationDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Button_OperationDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(66)))), ((int)(((byte)(84)))));
             this.Button_OperationDelete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Button_OperationDelete.Location = new System.Drawing.Point(477, 31);
+            this.Button_OperationDelete.Location = new System.Drawing.Point(469, 31);
             this.Button_OperationDelete.Name = "Button_OperationDelete";
             this.Button_OperationDelete.Size = new System.Drawing.Size(135, 23);
             this.Button_OperationDelete.TabIndex = 6;
@@ -892,7 +882,7 @@ namespace AutoConcat1_5
             this.TextBox_OperationBot.ForeColor = System.Drawing.Color.White;
             this.TextBox_OperationBot.Location = new System.Drawing.Point(224, 31);
             this.TextBox_OperationBot.Name = "TextBox_OperationBot";
-            this.TextBox_OperationBot.Size = new System.Drawing.Size(233, 23);
+            this.TextBox_OperationBot.Size = new System.Drawing.Size(225, 23);
             this.TextBox_OperationBot.TabIndex = 3;
             this.TextBox_OperationBot.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TextBox_OperationBot_KeyUp);
             // 
@@ -908,7 +898,7 @@ namespace AutoConcat1_5
             this.TextBox_OperationTop.ForeColor = System.Drawing.Color.White;
             this.TextBox_OperationTop.Location = new System.Drawing.Point(224, 4);
             this.TextBox_OperationTop.Name = "TextBox_OperationTop";
-            this.TextBox_OperationTop.Size = new System.Drawing.Size(233, 23);
+            this.TextBox_OperationTop.Size = new System.Drawing.Size(225, 23);
             this.TextBox_OperationTop.TabIndex = 2;
             this.TextBox_OperationTop.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TextBox_OperationTop_KeyUp);
             // 
@@ -970,6 +960,16 @@ namespace AutoConcat1_5
             this.tableLayoutPanel2.Size = new System.Drawing.Size(200, 100);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
+            // savedProjectListBindingSource
+            // 
+            this.savedProjectListBindingSource.AllowNew = false;
+            this.savedProjectListBindingSource.DataSource = typeof(AutoConcat1_5.Data.SavedProjectList);
+            // 
+            // operationListBindingSource
+            // 
+            this.operationListBindingSource.AllowNew = false;
+            this.operationListBindingSource.DataSource = typeof(AutoConcat1_5.Data.OperationList);
+            // 
             // delimiterPresetListBindingSource
             // 
             this.delimiterPresetListBindingSource.DataSource = typeof(AutoConcat1_5.Data.DelimiterPresetList);
@@ -995,7 +995,6 @@ namespace AutoConcat1_5
             this.tableLayoutPanel6.ResumeLayout(false);
             this.DataRepeater_Projects.ItemTemplate.ResumeLayout(false);
             this.DataRepeater_Projects.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.savedProjectListBindingSource)).EndInit();
             this.tableLayoutPanel5.ResumeLayout(false);
             this.LAYOUT_Main_Right.ResumeLayout(false);
             this.LAYOUT_Main_Right_Concat.ResumeLayout(false);
@@ -1011,6 +1010,7 @@ namespace AutoConcat1_5
             this.DataRepeater_Operations.ItemTemplate.ResumeLayout(false);
             this.DataRepeater_Operations.ItemTemplate.PerformLayout();
             this.DataRepeater_Operations.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.savedProjectListBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.operationListBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.delimiterPresetListBindingSource)).EndInit();
             this.ResumeLayout(false);

@@ -63,6 +63,9 @@ namespace AutoConcat1_5
                 case (Keys.Control | Keys.L):
                     Button_ProjectLoad.PerformClick();
                     return true;
+                case (Keys.Control | Keys.D):
+                    Button_ProjectDelete.PerformClick();
+                    return true;
 
                 case Keys.F1:
                     Button_Help.PerformClick();
@@ -213,9 +216,7 @@ namespace AutoConcat1_5
             BackColor = colBack;
 
             // Textboxes
-            RichTextBox_In.BackColor = colHigh;
             RichTextBox_In.ForeColor = colFore;
-            RichTextBox_Out.BackColor = colHigh;
             RichTextBox_Out.ForeColor = colFore;
             TextBox_Infix.BackColor = colMed;
             TextBox_Infix.ForeColor = colFore;
@@ -281,6 +282,8 @@ namespace AutoConcat1_5
                 LAYOUT_Main_Right_Divider.BackColor = colMed;
                 LAYOUT_Main.BackColor = colMed;
                 LAYOUT_Main_Left.BackColor = colMed;
+                RichTextBox_In.BackColor = colHigh;
+                RichTextBox_Out.BackColor = colHigh;
             }
             else
             {
@@ -289,6 +292,8 @@ namespace AutoConcat1_5
                 LAYOUT_Main_Right_Divider.BackColor = colLow;
                 LAYOUT_Main.BackColor = colLow;
                 LAYOUT_Main_Left.BackColor = colLow;
+                RichTextBox_In.BackColor = colMed;
+                RichTextBox_Out.BackColor = colMed;
             }
 
             // Labels
